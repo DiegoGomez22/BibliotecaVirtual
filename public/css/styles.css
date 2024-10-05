@@ -1,0 +1,386 @@
+/* Estilo general */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/Background_Home.jpg'); /* Imagen de fondo en el body */
+    background-size: cover; /* Cubre toda la página */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Imagen fija al hacer scroll */
+    color: rgb(255, 255, 255); /* Asegúrate de que el texto sea legible */
+    position: relative; /* Necesario para el pseudo-elemento */
+    min-height: 100%; /* Asegura que el body siempre tenga una altura mínima */
+    z-index: -2;
+}
+
+/* Capa negra semitransparente sobre el fondo */
+body::before {
+    content: "";
+    position: fixed; /* Hace que la capa negra se quede fija al hacer scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Ajusta la opacidad aquí */
+    z-index: -1; /* La capa negra detrás del contenido */
+    pointer-events: none; /* Evita que bloquee la interacción */
+}
+
+/* Sección principal .hero */
+.hero {
+    position: relative; /* Asegura que el contenido esté por encima de la capa */
+    z-index: 1; /* Asegura que esté por encima del pseudo-elemento */
+    height: 100vh; /* Mantén la altura completa de la ventana */
+    display: flex; /* Usar flexbox para centrar el contenido */
+    flex-direction: column; /* Para alinear verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+    padding: 20px; /* Para que no quede pegado a los bordes */
+}
+
+/* Estilo adicional si tienes más contenido */
+.section {
+    min-height: 100vh; /* Asegura que otras secciones también ocupen toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+/* Estilo para el título y eslogan */
+.hero h1 {
+    font-size: 4.5em;
+    margin-bottom: 0px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Estilo del botón */
+.cta-button {
+    background-color: rgb(255, 61, 46);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: rgb(255, 73, 60);
+}
+
+/* Estilo de la barra de navegación */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    padding: 0px 0;
+    z-index: 2;  /* Asegura que la barra esté por encima de la sección hero */
+    display: flex;
+    justify-content: space-between;  /* Distribuye el espacio equitativamente */
+    align-items: center;  /* Alinea verticalmente el logo y los enlaces */
+}
+
+/* Estilos del menú */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo de los enlaces del menú */
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+/* Estilo del botón "Iniciar Sesión" */
+.login-button {
+    background-color: rgb(255, 61, 46); /* Color rojo del botón */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Ajusta el tamaño del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Quita el subrayado */
+    font-size: 1.2em; /* Ajusta el tamaño de la fuente */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+/* Estilo al pasar el ratón por encima del botón "Iniciar Sesión" */
+.login-button:hover {
+    background-color: rgb(255, 73, 60); /* Color del botón al pasar el ratón */
+}
+
+/* Cambia el color de los enlaces al hacer hover, excepto el botón de "Iniciar Sesión" */
+nav ul li a:hover:not(.login-button) {
+    color: rgb(255, 111, 97); /* Cambia el color al pasar el ratón por encima */
+}
+
+/* Estilo del logo */
+.logo {
+    margin-left: 0px;  /* Ajusta si quieres más espacio a la izquierda */
+    padding: 15px;  /* Aplica el mismo padding a todos los lados */
+}
+
+.logo img {
+    height: 40px;  /* Cambia el tamaño del logo si es necesario */
+}
+
+/* Estilos de las secciones nuevas */
+section {
+    padding: 50px; /* Espaciado interno para las secciones */
+    text-align: center; /* Centra el texto en las secciones */
+}
+
+section h2 {
+    font-size: 2.5em; /* Tamaño de fuente para los títulos de las secciones */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+section p {
+    font-size: 1.2em; /* Tamaño de fuente para el texto */
+}
+
+/* Estilo para la sección Sobre Nosotros */
+#sobre-nosotros {
+    padding: 40px 20px; /* Espaciado alrededor de la sección */
+    text-align: center; /* Centra el título */
+}
+
+#sobre-nosotros h2 {
+    font-size: 2.5em; /* Tamaño del título */
+    margin-bottom: 40px; /* Espacio debajo del título */
+}
+
+#sobre-nosotros p {
+    max-width: 800px; /* Limita el ancho del texto */
+    margin: 0 auto; /* Centra el párrafo */
+    text-align: justify; /* Justifica el texto */
+    font-size: 1.2em; /* Ajusta el tamaño de la fuente */
+    line-height: 1.25; /* Espaciado entre líneas */
+    margin-bottom: 20px; /* Espacio entre párrafos */
+}
+
+/* Estilo del fondo de la sección si lo deseas */
+#sobre-nosotros {
+    background-color: rgba(0, 0, 0, 0.33); /* Fondo oscuro semitransparente */
+    color: white; /* Texto blanco */
+    border-radius: 0px; /* Bordes redondeados */
+}
+
+/* Estilo para la sección de Planes */
+#planes {
+    text-align: center; /* Centrar el texto */
+    padding: 40px 20px; /* Espaciado alrededor */
+}
+
+.plan-container {
+    display: flex; /* Usar flexbox para los cuadros */
+    justify-content: space-around; /* Espacio entre los cuadros */
+    flex-wrap: wrap; /* Permitir que los cuadros se ajusten en pantallas pequeñas */
+}
+
+.plan {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    color: white; /* Texto blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 10px; /* Espaciado externo */
+    flex: 1 1 300px; /* Permitir que los cuadros se ajusten a un ancho mínimo */
+    max-width: 300px; /* Ancho máximo de los cuadros */
+}
+
+.plan img {
+    width: 100%; /* Imagen a tamaño completo del cuadro */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    margin: 15px 0; /* Espaciado vertical alrededor de la imagen */
+}
+
+.plan h3 {
+    margin: 15px 0 10px; /* Espaciado del título */
+}
+
+.plan p {
+    margin: 10px 0; /* Espaciado del texto */
+}
+
+/* Estilo para los botones */
+.btn-price {
+    background-color: #28a745; /* Color verde para los botones de precio */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-top: 15px; /* Espacio superior */
+}
+
+.btn-price:hover {
+    background-color: #218838; /* Color más oscuro al pasar el ratón */
+}
+
+.btn-grey {
+    background-color: grey; /* Color gris para el botón del plan gratuito */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: not-allowed; /* Cambia el cursor a indicar que no es clickeable */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-top: 15px; /* Espacio superior */
+    opacity: 0.7; /* Opacidad para indicar que no es activo */
+}
+
+.btn-grey:hover {
+    background-color: grey; /* Mantiene el mismo color al pasar el ratón */
+}
+
+#faq {
+    display: flex; /* Usar flexbox para centrar el contenido */
+    flex-direction: column; /* Alinear los elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+    padding: 50px; /* Reduce el espaciado general */
+}
+
+.faq-item {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 800px; /* Limita el ancho máximo */
+    margin-bottom: 10px; /* Espaciado entre los elementos */
+    text-align: center; /* Centra el texto en el contenedor */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde alrededor del bloque */
+    border-radius: 10px; /* Bordes redondeados para un mejor aspecto */
+    overflow: hidden; /* Oculta el contenido que excede el tamaño */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    padding: 0px; /* Reduce el padding alrededor del contenido */
+}
+
+.faq-item:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Color de fondo al pasar el mouse */
+}
+
+.faq-answer {
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: justify;
+    max-height: 0; /* Inicialmente colapsado */
+    overflow: hidden; /* Oculta el contenido que excede el tamaño */
+    transition: max-height 0.5s ease-out; /* Transición suave para la altura */
+}
+
+.faq-question {
+    margin-top: 40px; /* Ajusta el margen superior a 10px */
+    margin-bottom: 0px; /* Ajusta el margen inferior a 10px */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la pregunta */
+    padding: 0; /* Elimina el espaciado alrededor de la pregunta */
+    background-color: transparent; /* Fondo transparente para la pregunta */
+    border-radius: 0; /* Bordes redondeados para un mejor aspecto */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    width: 100%; /* Asegúrate de que ocupe todo el ancho del contenedor */
+}
+
+
+.faq-question:hover {
+    background-color: transparent; /* Color al pasar el mouse, si deseas mantenerlo transparente */
+}
+
+footer {
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto en blanco */
+    padding: 40px 0; /* Aumenta el grosor (altura) del footer */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Asegura que se coloque correctamente en la página */
+    width: 100%; /* Ocupa el ancho completo */
+    bottom: 0;
+}
+
+.footer-content p {
+    margin: 10px 0; /* Espaciado entre los párrafos */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+.consulta-link {
+    color: rgb(180, 180, 180); /* Cambia el color del enlace */
+    text-decoration: underline; /* Subraya el enlace */
+    font-size: 18px; /* Tamaño del texto */
+    margin-top: 20px;
+    display: inline-block; /* Asegura que el link se comporte como un botón o bloque */
+}
+
+.consulta-link:hover {
+    color: rgb(100, 100, 100); /* Cambia el color cuando pases el ratón por encima */
+    text-decoration: none; /* Elimina el subrayado cuando pases el ratón por encima */
+}
+
+/* Estilo para la sección de registro */
+#register {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 30px; /* Espaciado interno */
+    max-width: 400px; /* Ancho máximo del cuadro */
+    margin: 50px auto; /* Centra el cuadro en la página */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+}
+
+/* Efecto de fondo borroso para la sección de registro */
+#register::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(10px); /* Aplicar efecto de desenfoque */
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+}
+
+/* Estilos para los campos del formulario */
+#register input, #register textarea {
+    width: 100%; /* Ancho completo */
+    padding: 12px; /* Espaciado interno */
+    margin: 10px 0; /* Espaciado entre campos */
+    border: 1px solid #ccc; /* Borde claro */
+    border-radius: 5px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo para el botón de enviar en el formulario de registro */
+#register button {
+    background-color: rgb(255, 61, 46); /* Color de fondo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 12px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+/* Efecto al pasar el ratón por encima del botón de envío */
+#register button:hover {
+    background-color: rgb(255, 73, 60); /* Color al pasar el ratón */
+}
+
+/* Estilos para los encabezados dentro del registro */
+#register h2 {
+    text-align: center; /* Centrar el título */
+    margin-bottom: 20px; /* Espaciado inferior */
+    color: rgb(50, 50, 50); /* Color del texto del encabezado */
+}

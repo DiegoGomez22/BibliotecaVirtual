@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta - Biblioteca Virtual</title>
+    <link rel="stylesheet" href="css/consulta.css">
+</head>
+<body>
+    <!-- Fondo borroso detrás del contenido -->
+    <div id="blur-background"></div>
+
+    <nav>
+        <div class="logo">
+            <img src="images/Logo_UAI.png" alt="Logo de Biblioteca Virtual">
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="register.html">Registrarse</a></li>
+        </ul>
+        <a href="login.html" class="login-button">Iniciar Sesión</a>
+    </nav>
+
+    <div id="consulta">
+        <h2>Selecciona tu consulta</h2>
+        <form>
+            <!-- Menú desplegable -->
+            <label for="consulta-tipo">Tipo de consulta:</label>
+            <select id="consulta-tipo" name="consulta-tipo" required>
+                <option value="">Selecciona una opción</option>
+                <option value="preguntas">Preguntas</option>
+                <option value="cuenta">Cuenta</option>
+                <option value="pago">Pago</option>
+                <option value="otra-consulta">Otra consulta</option>
+            </select>
+
+            <!-- Campo de correo electrónico -->
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <!-- Cuadro de texto para escribir la consulta -->
+            <label for="consulta-texto">Describe tu consulta:</label>
+            <textarea id="consulta-texto" name="consulta-texto" rows="5" placeholder="Escribe aquí tu consulta..." required></textarea>
+
+            <!-- Botón para enviar la consulta -->
+            <button type="submit">Enviar Consulta</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Contacto: BibliotecaVirtual@informatica.uai.cl</p>
+            <p>Teléfono: +56 9 1234 5678</p>
+            <p>Dirección: Avenida Siempre Viva 742, Providencia, Santiago, Chile</p>
+            <p><a href="consulta.html" class="consulta-link">Formulario de Consultas</a></p>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "bibliotecavirtual",
+  "version": "1.0.0",
+  "description": "Mi proyecto de biblioteca virtual",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0"
+  }
+}

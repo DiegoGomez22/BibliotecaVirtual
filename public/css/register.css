@@ -1,0 +1,155 @@
+/* Estilo para el cuerpo de la página */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/images/Background_Home.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px; /* Ajusta según la altura de tu barra de navegación */
+    padding-bottom: 70px; /* Ajusta según la altura de tu footer */
+    overflow: hidden;
+}
+
+/* Fondo borroso aplicado detrás del contenido principal */
+#blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    z-index: -1; /* Coloca el fondo detrás del contenido */
+}
+
+/* Estilo para la barra de navegación */
+nav {
+    display: flex;
+    justify-content: center; /* Centra los elementos del menú horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos dentro de la barra */
+    background-color: rgba(0, 0, 0, 0.9); /* Color de fondo de la barra de navegación */
+    padding: 25px 20px; /* Ajuste de padding */
+    position: fixed; /* Hace que se quede fija */
+    top: 0; /* Pegada al borde superior */
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Ajustar el tamaño y la alineación del logo */
+nav .logo img {
+    height: 40px; /* Reducir la altura del logo */
+    margin-left: 0px; /* Margen a la izquierda para alinearlo correctamente */
+    padding: 15px;
+    position: absolute; /* Para mantener el logo a la izquierda */
+    left: 20px;
+    top: 50%; /* Ajustar verticalmente */
+    transform: translateY(-50%); /* Centrar el logo verticalmente */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra los elementos de la lista (botones) */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaciado entre enlaces */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo del botón "Iniciar Sesión" */
+nav .login-button {
+    background-color: rgb(255, 61, 46);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 20px;
+    position: absolute; /* Para posicionar el botón en la esquina derecha */
+    right: 20px;
+    top: 50%; /* Asegura que el botón esté alineado verticalmente */
+    transform: translateY(-50%); /* Centra verticalmente el botón */
+}
+
+
+/* Estilo para la sección de registro */
+#register {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    z-index: 2; /* Asegura que esté sobre el blur */
+    position: relative; /* Mantiene la posición normal */
+}
+
+/* Estilos para los campos del formulario */
+#register input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#register button {
+    background-color: rgb(255, 61, 46);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#register button:hover {
+    background-color: rgb(255, 73, 60);
+}
+
+#register h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(50, 50, 50);
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed; /* Hace que se quede fijo */
+    bottom: 0; /* Pegada al borde inferior */
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-content .consulta-link {
+    color: rgb(255, 61, 46);
+    text-decoration: none;
+}
+
+.footer-content .consulta-link:hover {
+    text-decoration: underline;
+}

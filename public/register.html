@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Biblioteca Virtual</title>
+    <link rel="stylesheet" href="css/register.css">
+    <!-- Añade el favicon si tienes -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Fondo borroso detrás del contenido -->
+    <div id="blur-background"></div>
+
+    <nav>
+        <div class="logo">
+            <img src="images/Logo_UAI.png" alt="Logo de Biblioteca Virtual">
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="consulta.html">Contacto</a></li>
+        </ul>
+        <a href="login.html" class="login-button">Iniciar Sesión</a>
+    </nav>
+
+    <div id="register">
+        <h2>Crear Cuenta</h2>
+        <form>
+            <label for="username">Nombre de usuario</label>
+            <input type="text" id="username" placeholder="Nombre de usuario" required>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" placeholder="Contraseña" required>
+
+            <label for="confirm-password">Confirmar contraseña</label>
+            <input type="password" id="confirm-password" placeholder="Confirmar contraseña" required>
+
+            <button type="submit" aria-label="Registrarse">Registrarse</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Contacto: BibliotecaVirtual@informatica.uai.cl</p>
+            <p>Teléfono: +56 9 1234 5678</p>
+            <p>Dirección: Avenida Siempre Viva 742, Providencia, Santiago, Chile</p>
+            <p><a href="consulta.html" class="consulta-link">Formulario de Consultas</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
